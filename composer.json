@@ -12,7 +12,6 @@
     "minimum-stability": "dev",
     "prefer-stable" : true,
     "require": {
-        "puppyter/tracker": "@dev"
     },
     "autoload": {
         "psr-4": {
