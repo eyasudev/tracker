@@ -2,6 +2,7 @@
     "name": "puppyter/tracker",
     "type": "library",
     "license": "MIT",
+    "version": "1.0",
     "authors": [
         {
             "name": "Puppyter",
@@ -12,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Den\\Tracker\\": ""
+            "Den\\Tracker\\": "src/"
         }
     }
 }
