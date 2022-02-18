@@ -2,7 +2,7 @@
     "name": "puppyter/tracker",
     "type": "library",
     "license": "MIT",
-    "version": "1.0",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Puppyter",
@@ -12,6 +12,11 @@
     "minimum-stability": "dev",
     "prefer-stable" : true,
     "require": {
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     },
     "autoload-dev": {
         "psr-4": {
