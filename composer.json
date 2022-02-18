@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "puppyter/tracker": "1.0.*@dev"
+    },
     "autoload": {
         "psr-4": {
             "Den\\Tracker\\": "src/"
