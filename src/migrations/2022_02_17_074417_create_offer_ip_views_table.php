@@ -16,7 +16,6 @@ class CreateOfferIpViewsTable extends Migration
         Schema::create('offer_ip_views', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('offer_id');
-            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });
     }

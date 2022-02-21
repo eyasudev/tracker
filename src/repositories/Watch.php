@@ -8,7 +8,7 @@ class Watch
 {
     public function collect($offerId)
     {
-        $offer = OfferView::where('offer_id',$offerId)->get();
+        $offer = OfferView::where('offer_id',$offerId)->first();
         if ($offer == null)
         {
             $offer = OfferView::create(['offer_id'=>$offerId]);
@@ -18,7 +18,7 @@ class Watch
 
     public function clear($offerId)
     {
-        $offer = OfferView::where('offer_id',$offerId)->getOrCreate();
+        $offer = OfferView::where('offer_id',$offerId)->get();
         $offer->update(['count'=>0]);
     }
 
