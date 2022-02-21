@@ -14,7 +14,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Puppyter\\Tracker\\": "src/"
+            "Puppyter\\Tracker\\": "src/",
+            "Puppyter\\Tracker\\repositories\\": "src/repositories/"
         }
     }
 }

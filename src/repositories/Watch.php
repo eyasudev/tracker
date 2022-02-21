@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Repositories;
+namespace Puppyter\Tracker\repositories;
 
 use App\Models\OfferView;
 
-class OfferViewRepository
+class Watch
 {
     public function collect($offerId)
     {

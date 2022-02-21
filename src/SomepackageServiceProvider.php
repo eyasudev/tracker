@@ -1,6 +1,6 @@
 <?php
 
-namespace Den\Tracker;
+namespace Puppyter\Tracker;
 
 use Illuminate\Support\ServiceProvider;
 

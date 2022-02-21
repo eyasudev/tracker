@@ -5,7 +5,7 @@ namespace Puppyter\Tracker\repositories;
 use App\Models\OfferIpView;
 use App\Models\ViewerIp;
 
-class OfferIpViewRepository
+class WatchIp
 {
     public function collect($offerId, $clientIp)
     {
