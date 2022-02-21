@@ -9,7 +9,10 @@ class WatchIp
 {
     public function collect($offerId, $clientIp)
     {
-        $offer = OfferIpView::where('offer_id',$offerId)->firstOrCreate(['offer_id',$offerId]);
+        $offer = OfferIpView::where('offer_id',$offerId)->get();
+        if($offer == null){
+            $offer = OfferIpView::create(['offer_id'=>$offerId]);
+        }
         $userIps = $offer->viewerIps->user_ip;
         if (array_search($clientIp,$userIps) == false) {
             ViewerIp::create(['offer_ip_view_id' => $offer->id, "user_ip" => $clientIp]);

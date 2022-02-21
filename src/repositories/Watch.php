@@ -8,7 +8,11 @@ class Watch
 {
     public function collect($offerId)
     {
-        $offer = OfferView::where('offer_id',$offerId)->firstOrCreate(['offer_id'=>$offerId]);
+        $offer = OfferView::where('offer_id',$offerId)->get();
+        if ($offer == null)
+        {
+            $offer = OfferView::create(['offer_id'=>$offerId]);
+        }
         $offer->increment('views',1);
     }
 
