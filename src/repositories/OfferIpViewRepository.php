@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Repositories;
+namespace Puppyter\Tracker\repositories;
 
 use App\Models\OfferIpView;
 use App\Models\ViewerIp;
@@ -12,7 +12,7 @@ class OfferIpViewRepository
         $offer = OfferIpView::where('offer_id',$offerId)->firstOrCreate(['offer_id',$offerId]);
         $userIps = $offer->viewerIps->user_ip;
         if (array_search($clientIp,$userIps) == false) {
-            ViewerIp::create(['offer_id' => $offerId, "user_ip" => $clientIp]);
+            ViewerIp::create(['offer_ip_view_id' => $offer->id, "user_ip" => $clientIp]);
             $offer->increment('views',1);
         }
     }
