@@ -29,6 +29,6 @@ class Watch
 
     public function get($offerId)
     {
-        return OfferView::where('offer_id',$offerId)->get('views');
+        return OfferView::where('offer_id',$offerId)->get();
     }
 }

@@ -38,6 +38,6 @@ class WatchIp
 
     public function get($offerId)
     {
-        return OfferIpView::where("offer_id",$offerId)->get('views');
+        return OfferIpView::where("offer_id",$offerId)->get();
     }
 }
