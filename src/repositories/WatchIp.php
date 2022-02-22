@@ -36,7 +36,7 @@ class WatchIp
         OfferIpView::where('offer_id',$offerId)->delete();
     }
 
-    public function get($offerId)
+    public function get()
     {
         return OfferIpView::orderBy('views')->limit(10)->get();
     }
