@@ -27,7 +27,7 @@ class Watch
         OfferView::where('offer_id',$offerId)->delete();
     }
 
-    public function get($offerId)
+    public function get()
     {
         return OfferView::orderBy('views')->limit(10)->get();
     }
