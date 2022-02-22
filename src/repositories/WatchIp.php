@@ -17,9 +17,11 @@ class WatchIp
 
         if ($userIps == null) {
             $userIps[] = ViewerIp::create(['offer_ip_view_id' => $offer->id, "user_ip" => $clientIp])->toArray();
+            $offer->increment('views');
         }
         if (array_search($clientIp,$userIps[0]) == false) {
             ViewerIp::create(['offer_ip_view_id' => $offer->id, "user_ip" => $clientIp]);
+            $offer->increment('views');
         }
     }
 
