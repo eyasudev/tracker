@@ -32,7 +32,7 @@ class Watch
         return OfferView::orderBy('views')->limit(10)->get();
     }
 
-    public function getForId($offerId)
+    public static function getForId($offerId)
     {
         return OfferIpView::where('offer_id',$offerId)->get('views');
     }
