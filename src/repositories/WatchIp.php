@@ -7,7 +7,7 @@ use App\Models\ViewerIp;
 
 class WatchIp
 {
-    public function collect($offerId, $clientIp)
+    public static function collect($offerId, $clientIp)
     {
         $offer = OfferIpView::where('offer_id',$offerId)->first();
         if($offer == null){
@@ -25,19 +25,19 @@ class WatchIp
         }
     }
 
-    public function clear($offerId)
+    public static function clear($offerId)
     {
         $offer = OfferIpView::where('offer_id',$offerId)->get();
         $offer->update(['views'=>0]);
     }
 
-    public function delete($offerId)
+    public static function delete($offerId)
     {
         OfferIpView::where('offer_id',$offerId)->delete();
     }
 
-    public function get()
+    public static function get()
     {
-        return OfferIpView::orderBy('views')->limit(10)->get();
+        return OfferIpView::orderBy('views')->take(10)->get();
     }
 }
