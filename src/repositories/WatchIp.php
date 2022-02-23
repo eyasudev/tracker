@@ -40,4 +40,9 @@ class WatchIp
     {
         return OfferIpView::orderBy('views')->take(10)->get();
     }
+
+    public function getForId($offerId)
+    {
+        return OfferIpView::where('offer_id',$offerId)->get('views');
+    }
 }
